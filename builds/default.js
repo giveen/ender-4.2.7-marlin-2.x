@@ -1,5 +1,5 @@
 module.exports = {
-    board_env: "BOARD_CREALITY_V427",
+    board_env: " STM32F103RE_creality",
     meta: {
         stable_name: "ender_3_4.2.7-{{marlin_version}}-default-{{uid}}",
         nightly_name: "ender_3_4.2.7-{{current_date}}-default-{{uid}}"
