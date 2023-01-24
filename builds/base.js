@@ -1,18 +1,21 @@
 module.exports = {
-    extends: "builds/base.js", // <--
+    extends: "builds/default.js",
     meta: {
-        stable_name: "ender_3_4.2.7-{{marlin_version}}-manual_mesh_5x5-{{uid}}",
-        nightly_name: "ender_3_4.2.7-{{current_date}}-manual_mesh_5x5-{{uid}}"
+        stable_name: "ender_3_4.2.7-{{marlin_version}}-base-{{uid}}",
+        nightly_name: "ender_3_4.2.7-{{current_date}}-base-{{uid}}"
     },
     configuration: {
         enable: [
-            "PROBE_MANUALLY",
-            ["NOZZLE_TO_PROBE_OFFSET", [0, 0, 0]],
-            "MESH_BED_LEVELING",
-            "RESTORE_LEVELING_AFTER_G28",
-            "LCD_BED_LEVELING",
-            "MESH_EDIT_MENU",
-            ["GRID_MAX_POINTS_X", 5]
+            ["STRING_CONFIG_H_AUTHOR", "(Dust, valerionew, Ender-3, zisismaras)"],
+            //standard leveling menu helper
+            "LCD_BED_TRAMMING",
+            "BED_TRAMMING_INCLUDE_CENTER"
+        ]
+    },
+    configuration_adv: {
+        enable: [
+            //octoprint
+            "HOST_ACTION_COMMANDS"
         ]
     }
 };
