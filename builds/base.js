@@ -6,12 +6,11 @@ module.exports = {
     },
     configuration: {
         enable: [
-            ["STRING_CONFIG_H_AUTHOR", "(Dust, valerionew, Ender-3, zisismaras)"],
+            ["STRING_CONFIG_H_AUTHOR", "(Dust, valerionew, Ender-3, zisismaras, giveen)"],
             //standard leveling menu helper
             "LCD_BED_TRAMMING",
             "BED_TRAMMING_INCLUDE_CENTER",
-            "S_CURVE_ACCELERATION",
-            ["MOTHERBOARD", "BOARD_CREALITY_V427"]
+            "S_CURVE_ACCELERATION"
         ]
     },
     configuration_adv: {
