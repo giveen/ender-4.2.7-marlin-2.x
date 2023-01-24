@@ -15,4 +15,3 @@ jobs:
     runs-on: ubuntu-latest 
     steps:
     - uses: zisismaras/marlin_auto_build@v1
-permissions: write-all
