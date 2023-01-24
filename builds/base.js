@@ -11,7 +11,7 @@ module.exports = {
             "LCD_BED_TRAMMING",
             "BED_TRAMMING_INCLUDE_CENTER",
             "S_CURVE_ACCELERATION",
-            ["MOTHERBOARD", "BOARD_CREALITY_V427"],
+            ["MOTHERBOARD", "BOARD_CREALITY_V427"]
         ]
     },
     configuration_adv: {
