@@ -10,6 +10,7 @@ module.exports = {
             //standard leveling menu helper
             "LCD_BED_TRAMMING",
             "BED_TRAMMING_INCLUDE_CENTER"
+            "S_CURVE_ACCELERATION"
         ]
     },
     configuration_adv: {
