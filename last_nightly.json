@@ -1,0 +1,17 @@
+{
+    "builds/base.js": {
+        "version": "7a49fab16d9fd3df238cbd341f90b067e401b17c",
+        "md5": "72ae5e4525d7f7deae75654d33a985ab",
+        "assetId": 92898577
+    },
+    "builds/default.js": {
+        "version": "7a49fab16d9fd3df238cbd341f90b067e401b17c",
+        "md5": "fc3dc1895bafb23b8fa0aa64112af96c",
+        "assetId": 92898578
+    },
+    "builds/manualBedMesh5x5.js": {
+        "version": "7a49fab16d9fd3df238cbd341f90b067e401b17c",
+        "md5": "860e53ed9b769f3a670ea402170d418a",
+        "assetId": 92898584
+    }
+}
