@@ -4,11 +4,12 @@ module.exports = {
     configuration: {
         enable: [
             "PROBE_MANUALLY",
-            ["NOZZLE_TO_PROBE_OFFSET", [0, 0, 0]],
+            "Z_SAFE_HOMING",
             "MESH_BED_LEVELING",
             "RESTORE_LEVELING_AFTER_G28",
             "LCD_BED_LEVELING",
             "MESH_EDIT_MENU"
+            ["HOMING_FEEDRATE_MM_M" [(20*60), (20*60), (8*60)]
         ]
     }
 };
