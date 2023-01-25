@@ -22,6 +22,6 @@ module.exports = {
         ]
         //disable: [
         //"ARC_SUPPORT"
-        ]
+       // ]
     }
 };
