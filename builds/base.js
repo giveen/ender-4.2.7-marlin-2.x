@@ -7,7 +7,6 @@ module.exports = {
     configuration: {
         enable: [
             ["STRING_CONFIG_H_AUTHOR", "(Dust, valerionew, Ender-3, zisismaras, giveen)"],
-            //standard leveling menu helper
             "LCD_BED_TRAMMING",
             "BED_TRAMMING_INCLUDE_CENTER",
             "S_CURVE_ACCELERATION",
@@ -20,8 +19,8 @@ module.exports = {
             //octoprint
             "HOST_ACTION_COMMANDS"
         ]
-        //disable: [
-        //"ARC_SUPPORT"
-       // ]
+        disable: [
+            "ARC_SUPPORT"
+        ]
     }
 };
