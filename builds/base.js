@@ -11,7 +11,7 @@ module.exports = {
             "LCD_BED_TRAMMING",
             "BED_TRAMMING_INCLUDE_CENTER",
             "S_CURVE_ACCELERATION",
-            "INDIVIDUAL_AXIS_HOMING_MENU".
+            "INDIVIDUAL_AXIS_HOMING_MENU",
             ["DEFAULT_MAX_FEEDRATE", [500, 500, 20]]
         ]
     },
