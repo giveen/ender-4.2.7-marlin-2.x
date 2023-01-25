@@ -11,5 +11,6 @@ module.exports = {
             "MESH_EDIT_MENU"
             ["HOMING_FEEDRATE_MM_M" [(20*60), (20*60), (8*60)]
         ]
+        disable: ["ARC_SUPPORT"]
     }
 };
