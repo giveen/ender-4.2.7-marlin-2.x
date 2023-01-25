@@ -20,8 +20,8 @@ module.exports = {
             //octoprint
             "HOST_ACTION_COMMANDS"
         ]
-        disable: [
-        "ARC_SUPPORT"
+        //disable: [
+        //"ARC_SUPPORT"
         ]
     }
 };
