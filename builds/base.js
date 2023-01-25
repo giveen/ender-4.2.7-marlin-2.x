@@ -12,7 +12,7 @@ module.exports = {
             "BED_TRAMMING_INCLUDE_CENTER",
             "S_CURVE_ACCELERATION",
             "INDIVIDUAL_AXIS_HOMING_MENU",
-            ["DEFAULT_MAX_FEEDRATE", [500, 500, 20]]
+            ["DEFAULT_MAX_FEEDRATE", [500, 500, 20, 5]]
         ]
     },
     configuration_adv: {
