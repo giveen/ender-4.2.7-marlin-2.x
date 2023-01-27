@@ -11,7 +11,7 @@ module.exports = {
             "BED_TRAMMING_INCLUDE_CENTER",
             "S_CURVE_ACCELERATION",
             "INDIVIDUAL_AXIS_HOMING_MENU",
-            ["DEFAULT_MAX_FEEDRATE", [500, 500, 20, 5]]
+            ["DEFAULT_MAX_FEEDRATE", [500, 500, 20, 5]],
             "PREHEAT_BEFORE_LEVELING",
             ["LEVELING_NOZZLE_TEMP", 190],
             ["LEVELING_BED_TEMP", 55"]
