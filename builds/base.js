@@ -7,17 +7,15 @@ module.exports = {
     configuration: {
         enable: [
             ["STRING_CONFIG_H_AUTHOR", "(Dust, valerionew, Ender-3, zisismaras, giveen)"],
-            "LCD_BED_TRAMMING",
-            "BED_TRAMMING_INCLUDE_CENTER",
-            "S_CURVE_ACCELERATION",
-            "INDIVIDUAL_AXIS_HOMING_MENU",
-            ["DEFAULT_MAX_FEEDRATE", [500, 500, 20, 5]]
+            "LCD_BED_TRAMMING"
         ]
     },
     configuration_adv: {
         enable: [
             //octoprint
-            "HOST_ACTION_COMMANDS"
+            "HOST_ACTION_COMMANDS",
+            "EMERGENCY_PARSER",
+            "ADVANCED_PAUSE_FEATURE"
         ]
     }
 };
