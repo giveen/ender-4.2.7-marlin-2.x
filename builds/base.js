@@ -8,6 +8,7 @@ module.exports = {
         enable: [
             ["STRING_CONFIG_H_AUTHOR", "(Dust, valerionew, Ender-3, zisismaras, giveen)"],
             "LCD_BED_TRAMMING"
+            "NOZZLE_PARK_FEATURE"
         ]
     },
     configuration_adv: {
