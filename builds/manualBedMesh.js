@@ -16,7 +16,7 @@ module.exports = {
             "LEVELING_NOZZLE_TEMP, 190",
             "LEVELING_BED_TEMP 55"
         ]
-    }
+    },
     configuration_adv: {
         enable: [
             "EMERGENCY_PARSER",
