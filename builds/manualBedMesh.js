@@ -13,8 +13,8 @@ module.exports = {
             "INDIVIDUAL_AXIS_HOMING_MENU",
             ["DEFAULT_MAX_FEEDRATE", [500, 500, 20, 5]]
             "PREHEAT_BEFORE_LEVELING",
-            ["LEVELING_NOZZLE_TEMP, 190"],
-            [LEVELING_BED_TEMP, 55"]
+            ["LEVELING_NOZZLE_TEMP", 190],
+            ["LEVELING_BED_TEMP", 55"]
         ]
     },
     configuration_adv: {
