@@ -15,7 +15,7 @@ module.exports = {
             "PREHEAT_BEFORE_LEVELING",
             ["LEVELING_NOZZLE_TEMP", 190],
             ["LEVELING_BED_TEMP", 55"]
-        ]
+        ],
     },
     configuration_adv: {
         enable: [
