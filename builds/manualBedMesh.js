@@ -3,7 +3,6 @@ module.exports = {
     configuration: {
         enable: [
             "PROBE_MANUALLY",
-            "NOZZLE_PARK_FEATURE",
             "Z_SAFE_HOMING",
             "MESH_BED_LEVELING",
             "RESTORE_LEVELING_AFTER_G28",
