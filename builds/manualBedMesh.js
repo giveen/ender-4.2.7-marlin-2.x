@@ -7,7 +7,7 @@ module.exports = {
             "MESH_BED_LEVELING",
             "RESTORE_LEVELING_AFTER_G28",
             "LCD_BED_LEVELING",
-            "MESH_EDIT_MENU"
+            "MESH_EDIT_MENU",
             "BED_TRAMMING_INCLUDE_CENTER",
             "S_CURVE_ACCELERATION",
             "INDIVIDUAL_AXIS_HOMING_MENU",
