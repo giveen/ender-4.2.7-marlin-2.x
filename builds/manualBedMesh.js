@@ -12,15 +12,11 @@ module.exports = {
             "S_CURVE_ACCELERATION",
             "INDIVIDUAL_AXIS_HOMING_MENU",
             ["DEFAULT_MAX_FEEDRATE", [500, 500, 20, 5]],
-            ["LEVELING_NOZZLE_TEMP", 190],
-            ["LEVELING_BED_TEMP", 55],
-            "PREHEAT_BEFORE_LEVELING"
+            ["HOMING_FEEDRATE_MM_M", [(20*60), (20*60), (6*60)]]
         ],
     },
     configuration_adv: {
         enable: [
-            "EMERGENCY_PARSER",
-            "ADVANCED_PAUSE_FEATURE",
             "EMERGENCY_PARSER",
             "ADVANCED_PAUSE_FEATURE"
         ]
