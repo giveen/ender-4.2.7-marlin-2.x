@@ -1,0 +1,17 @@
+{
+    "builds/base.js": {
+        "version": "2.1.2",
+        "md5": "fe77343916358cdef166f258c400d105",
+        "assetId": 93473639
+    },
+    "builds/default.js": {
+        "version": "2.1.2",
+        "md5": "7447dca1fa55d76dfae84ae4efc086ff",
+        "assetId": 93473641
+    },
+    "builds/octoprint.js": {
+        "version": "2.1.2",
+        "md5": "7957ae4732c5ccbbd423647815fe2abd",
+        "assetId": 93473642
+    }
+}
