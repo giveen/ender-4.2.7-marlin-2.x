@@ -1,5 +1,6 @@
 // builds/manualBedMesh5x5.js
 module.exports = {
+    partial: true,
     extends: "builds/base.js", //we can extend and include at the same time
     include: "builds/manualBedMesh.js", // <--
     meta: {
