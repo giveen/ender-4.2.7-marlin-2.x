@@ -1,22 +1,22 @@
 {
     "builds/autoLevel5x5.js": {
-        "version": "67bc855000345921281a2c8c210e4363542f6a81",
+        "version": "aae103e3592eceefe46320882cc96320b995a245",
         "md5": "cf74f1cb2475063c9ee3cbfab0dd340e",
-        "assetId": 93646967
+        "assetId": 93828546
     },
     "builds/base.js": {
-        "version": "67bc855000345921281a2c8c210e4363542f6a81",
+        "version": "aae103e3592eceefe46320882cc96320b995a245",
         "md5": "fe77343916358cdef166f258c400d105",
-        "assetId": 93474091
+        "assetId": 93828547
     },
     "builds/default.js": {
-        "version": "67bc855000345921281a2c8c210e4363542f6a81",
+        "version": "aae103e3592eceefe46320882cc96320b995a245",
         "md5": "7447dca1fa55d76dfae84ae4efc086ff",
-        "assetId": 93474093
+        "assetId": 93828548
     },
     "builds/octoprint.js": {
-        "version": "67bc855000345921281a2c8c210e4363542f6a81",
+        "version": "aae103e3592eceefe46320882cc96320b995a245",
         "md5": "1300b10f3ae89d912f9235df4dd66231",
-        "assetId": 93475353
+        "assetId": 93828549
     }
 }
