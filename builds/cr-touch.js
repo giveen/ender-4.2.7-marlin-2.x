@@ -1,6 +1,6 @@
 module.exports = {
-    extends: "builds/base.js",
-    include: "builds/autoLevel.js",
+    extends: "builds/base/base.js",
+    include: "builds/features/autoLevel.js",
     include: "builds/autoLevel5x5.js",
     configuration: {
         enable: [
