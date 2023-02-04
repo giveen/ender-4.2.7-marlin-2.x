@@ -1,5 +1,4 @@
 module.exports = {
-    partial: true,
     extends: "builds/base.js",
     include: "builds/autoLevel.js",
     configuration: {
