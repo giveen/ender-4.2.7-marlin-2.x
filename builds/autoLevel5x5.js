@@ -1,5 +1,5 @@
 module.exports = {
-    extends: "builds/base.js",
+    extends: "builds/base/base.js",
     include: "builds/features/autoLevel.js",
     meta: {
         stable_name: "ender_3_4.2.2-{{marlin_version}}-auto_level_5x5-{{uid}}",
