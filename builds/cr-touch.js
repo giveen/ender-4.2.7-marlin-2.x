@@ -1,6 +1,7 @@
 module.exports = {
     extends: "builds/base.js",
     include: "builds/autoLevel.js",
+    include: "builds/autoLevel5x5.js",
     configuration: {
         enable: [
             "BLTOUCH",
