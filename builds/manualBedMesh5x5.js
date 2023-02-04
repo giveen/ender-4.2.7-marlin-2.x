@@ -1,7 +1,7 @@
 // builds/manualBedMesh5x5.js
 module.exports = {
     partial: true,
-    extends: "builds/base.js", //we can extend and include at the same time
+    extends: "builds/base/base.js", //we can extend and include at the same time
     include: "builds/features/manualBedMesh.js", // <--
     meta: {
         stable_name: "ender_3_4.2.7-{{marlin_version}}-manual_mesh_5x5-{{uid}}",
