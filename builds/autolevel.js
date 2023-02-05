@@ -1,5 +1,4 @@
 module.exports = {
-    partial: true,
     configuration: {
         enable: [
             "BLTOUCH",
