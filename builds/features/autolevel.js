@@ -1,5 +1,4 @@
 module.exports = {
-    extends: "builds/base/base.js",
     partial: true,
     configuration: {
         enable: [
