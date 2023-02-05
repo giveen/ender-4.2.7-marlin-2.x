@@ -1,6 +1,5 @@
 module.exports = {
-    board_env: "STM32F103RE_creality",
-    include: "builds/base/base.js",
+    extends: "builds/base.js",
     include: "builds/features/autoLevel.js",
     include: "builds/autoLevel5x5.js",
     meta: {
