@@ -4,6 +4,7 @@ module.exports = {
         enable: [
             "BLTOUCH",
             "AUTO_BED_LEVELING_BILINEAR",
+            "RESTORE_LEVELING_AFTER_G28",
             "Z_SAFE_HOMING",
             "USE_PROBE_FOR_Z_HOMING",
             ["Z_MIN_PROBE_PIN", q`PB1`],
