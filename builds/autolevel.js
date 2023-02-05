@@ -1,4 +1,5 @@
 module.exports = {
+    extends: "builds/base.js",
     configuration: {
         enable: [
             "BLTOUCH",
