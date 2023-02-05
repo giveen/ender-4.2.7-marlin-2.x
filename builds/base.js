@@ -1,6 +1,5 @@
 module.exports = {
     extends: "builds/default/marlin_default.js",
-    partial: true,
     meta: {
         stable_name: "ender_3_4.2.7-{{marlin_version}}-base-{{uid}}",
         nightly_name: "ender_3_4.2.7-{{current_date}}-base-{{uid}}"
