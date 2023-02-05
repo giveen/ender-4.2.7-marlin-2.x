@@ -1,5 +1,5 @@
 module.exports = {
-    board_env: "STM32F103RE_creality",
+    extends: "builds/base/base.js",
     partial: true,
     configuration: {
         enable: [
