@@ -2,6 +2,10 @@ module.exports = {
     extends: "builds/base/base.js",
     include: "builds/features/autoLevel.js",
     include: "builds/autoLevel5x5.js",
+    meta: {
+        stable_name: "ender_3_4.2.2-{{marlin_version}}-cr_level_5x5-{{uid}}",
+        nightly_name: "ender_3_4.2.2-{{current_date}}-cr_level_5x5-{{uid}}"
+    },
     configuration: {
         enable: [
             "BLTOUCH",
@@ -26,7 +30,17 @@ module.exports = {
             "BABYSTEPPING",
             "BABYSTEP_ZPROBE_OFFSET",
             "PROBE_OFFSET_WIZARD",
-
+            "SOUND_MENU_ITEM",
+            "HOST_ACTION_COMMANDS",
+            "AUTO_REPORT_TEMPERATURES",
+            "AUTO_REPORT_POSITION",
+            "M114_DETAIL",
+            "M114_REALTIME",
+            "EXTENDED_CAPABILITIES_REPORT",
+            "REPORT_FAN_CHANGE",
+            "GCODE_CASE_INSENSITIVE",
+            "HOST_PROMPT_SUPPORT",
+            "HOST_START_MENU_ITEM",
             //symmetrical
             ["PROBING_MARGIN_LEFT", 45],
             ["PROBING_MARGIN_RIGHT", 45],
