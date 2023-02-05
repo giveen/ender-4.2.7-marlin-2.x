@@ -9,10 +9,10 @@
         "md5": "882453db25257fc5764fd4de6b60dbd4",
         "assetId": 94389895
     },
-    "builds/cr-touch.js": {
+    "builds/cr-touch-octoprint.js": {
         "version": "444259da079f07490de016566bc66950aab473f3",
-        "md5": "59227cc905e5fc842b4fad5834cc045b",
-        "assetId": 94389896
+        "md5": "3afd35fcaa4ef9ee534665f0a2251c6f",
+        "assetId": 94420523
     },
     "builds/manualBedMesh5x5.js": {
         "version": "444259da079f07490de016566bc66950aab473f3",
