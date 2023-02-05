@@ -1,5 +1,6 @@
 module.exports = {
     partial: true,
+    extends: "builds/base/base.js",
     configuration: {
         enable: [
             "PROBE_MANUALLY",
