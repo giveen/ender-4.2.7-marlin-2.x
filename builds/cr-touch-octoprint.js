@@ -9,7 +9,6 @@ module.exports = {
         enable: [
         ],
         disable: [
-            "Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN"
         ]
     },
     configuration_adv: {
