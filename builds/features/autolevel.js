@@ -1,4 +1,5 @@
 module.exports = {
+    board_env: "STM32F103RE_creality",
     partial: true,
     configuration: {
         enable: [
