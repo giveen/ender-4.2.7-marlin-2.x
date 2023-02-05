@@ -13,22 +13,12 @@ module.exports = {
     },
     configuration_adv: {
         enable: [
-            "SOUND_MENU_ITEM",
             "HOST_ACTION_COMMANDS",
-            "AUTO_REPORT_TEMPERATURES",
-            "AUTO_REPORT_POSITION",
-            "M114_DETAIL",
-            "M114_REALTIME",
             "EXTENDED_CAPABILITIES_REPORT",
             "REPORT_FAN_CHANGE",
-            "GCODE_CASE_INSENSITIVE",
-            "BLTOUCH_LCD_VOLTAGE_MENU"
+            "GCODE_CASE_INSENSITIVE"
         ],
-        disable: [
-            "BLTOUCH_HS_MODE",
-            "BLTOUCH_FORCE_SW_MODE",
-            "BLTOUCH_SET_5V_MODE",
-            
+        disable: [      
         ]
     }
 };
