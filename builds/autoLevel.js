@@ -3,7 +3,7 @@ module.exports = {
     configuration: {
         enable: [
             "BLTOUCH",
-            "AUTO_BED_LEVELING_BILINEAR",
+            "AUTO_BED_LEVELING_UBL",
             "RESTORE_LEVELING_AFTER_G28",
             "Z_SAFE_HOMING",
             "USE_PROBE_FOR_Z_HOMING",
