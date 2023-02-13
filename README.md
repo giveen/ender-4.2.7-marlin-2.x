@@ -9,6 +9,9 @@ CR-Level-5x5 is for CR Touch (includes features to help with Octoprint, its what
 
 Manual-Mesh-5x5 is standard builds if you dont have an auto-leveler
 
-OCto-Manual-5x5 is for assistance with Octoprint and no auto-leveler
+Octo-Manual-5x5 is for assistance with Octoprint and no auto-leveler
 
 I dont recommend using base/default.
+
+
+Nightly builds are done every day based off the changes Marlin has made in their base code. Use at your own risk, but you can always flash back.
