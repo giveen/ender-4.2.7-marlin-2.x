@@ -7,6 +7,11 @@ module.exports = {
     },
     configuration: {
         enable: [
+            "BED_TRAMMING_INCLUDE_CENTER",
+            "S_CURVE_ACCELERATION",
+            "INDIVIDUAL_AXIS_HOMING_MENU",
+            ["DEFAULT_MAX_FEEDRATE", [500, 500, 20, 5]],
+            ["HOMING_FEEDRATE_MM_M", [(30*60), (30*60), (6*60)]]
         ],
         disable: [
         ]
@@ -16,7 +21,8 @@ module.exports = {
             "HOST_ACTION_COMMANDS",
             "EXTENDED_CAPABILITIES_REPORT",
             "REPORT_FAN_CHANGE",
-            "GCODE_CASE_INSENSITIVE"
+            "GCODE_CASE_INSENSITIVE",
+            "BINARY_FILE_TRANSFER"
         ],
         disable: [      
         ]
