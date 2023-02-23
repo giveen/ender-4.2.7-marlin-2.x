@@ -8,7 +8,7 @@ module.exports = {
             "Z_SAFE_HOMING",
             "USE_PROBE_FOR_Z_HOMING",
             "LCD_BED_LEVELING",
-            ["DEFAULT_LEVELING_FADE_HEIGHT", 20],
+            ["DEFAULT_LEVELING_FADE_HEIGHT", 10],
             ["NOZZLE_TO_PROBE_OFFSET", [-49, -9, 0]],
             //M48 test
             "Z_MIN_PROBE_REPEATABILITY_TEST"
