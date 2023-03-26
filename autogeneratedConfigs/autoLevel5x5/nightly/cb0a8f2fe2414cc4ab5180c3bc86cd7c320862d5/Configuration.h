@@ -1242,7 +1242,7 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE { 500, 500, 20, 5 } //ORIGINAL: #define DEFAULT_MAX_FEEDRATE          { 500, 500, 5, 25 }
+#define DEFAULT_MAX_FEEDRATE          { 500, 500, 5, 25 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -1331,7 +1331,7 @@
  *
  * See https://github.com/synthetos/TinyG/wiki/Jerk-Controlled-Motion-Explained
  */
-#define S_CURVE_ACCELERATION //ORIGINAL: //#define S_CURVE_ACCELERATION
+//#define S_CURVE_ACCELERATION
 
 //===========================================================================
 //============================= Z Probe Options =============================
@@ -1716,8 +1716,8 @@
 
 // @section extruder
 
-//#define DISABLE_E               // Disable the extruder when not stepping
-//#define DISABLE_OTHER_EXTRUDERS // Keep only the active extruder enabled
+//#define DISABLE_E                 // Disable the extruder when not stepping
+//#define DISABLE_INACTIVE_EXTRUDER // Keep only the active extruder enabled
 
 // @section motion
 
@@ -2183,7 +2183,7 @@
   #define BED_TRAMMING_INSET_LFRB { 30, 30, 30, 30 } // (mm) Left, Front, Right, Back insets
   #define BED_TRAMMING_HEIGHT      0.0        // (mm) Z height of nozzle at tramming points
   #define BED_TRAMMING_Z_HOP       4.0        // (mm) Z height of nozzle between tramming points
-  #define BED_TRAMMING_INCLUDE_CENTER //ORIGINAL:   //#define BED_TRAMMING_INCLUDE_CENTER       // Move to the center after the last corner
+  //#define BED_TRAMMING_INCLUDE_CENTER       // Move to the center after the last corner
   //#define BED_TRAMMING_USE_PROBE
   #if ENABLED(BED_TRAMMING_USE_PROBE)
     #define BED_TRAMMING_PROBE_TOLERANCE 0.1  // (mm)
@@ -2250,7 +2250,7 @@
 #endif
 
 // Homing speeds (linear=mm/min, rotational=°/min)
-#define HOMING_FEEDRATE_MM_M { 1800, 1800, 360 } //ORIGINAL: #define HOMING_FEEDRATE_MM_M { (20*60), (20*60), (4*60) }
+#define HOMING_FEEDRATE_MM_M { (20*60), (20*60), (4*60) }
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
@@ -2692,7 +2692,7 @@
 //
 // Add individual axis homing items (Home X, Home Y, and Home Z) to the LCD menu.
 //
-#define INDIVIDUAL_AXIS_HOMING_MENU //ORIGINAL: //#define INDIVIDUAL_AXIS_HOMING_MENU
+//#define INDIVIDUAL_AXIS_HOMING_MENU
 //#define INDIVIDUAL_AXIS_HOMING_SUBMENU
 
 //
