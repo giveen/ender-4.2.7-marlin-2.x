@@ -10,10 +10,15 @@ module.exports = {
             "BED_TRAMMING_INCLUDE_CENTER",
             "S_CURVE_ACCELERATION",
             "INDIVIDUAL_AXIS_HOMING_MENU",
-            ["DEFAULT_MAX_FEEDRATE", [500, 500, 20, 5]],
-            ["HOMING_FEEDRATE_MM_M", [(30*60), (30*60), (6*60)]]
+            ["DEFAULT_MAX_FEEDRATE", [1000, 1000, 30, 100]],
+            ["HOMING_FEEDRATE_MM_M", [(30*60), (30*60), (6*60)]],
+            ["DEFAULT_TRAVEL_ACCELERATION", 1000],
+            ["DEFAULT_MAX_ACCELERATION", [1500, 1500, 200, 700]],
+            ["DEFAULT_TRAVEL_ACCELERATION", 1500],
         ],
         disable: [
+             "EEPROM_CHITCHAT",
+            "THERMAL_PROTECTION_COOLER"
         ]
     },
     configuration_adv: {
@@ -22,6 +27,7 @@ module.exports = {
             "EXTENDED_CAPABILITIES_REPORT",
             "REPORT_FAN_CHANGE",
             "GCODE_CASE_INSENSITIVE",
+            "ADAPTIVE_STEP_SMOOTHING",
             "BINARY_FILE_TRANSFER"
         ],
         disable: [      
