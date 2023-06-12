@@ -13,8 +13,8 @@ module.exports = {
             ["DEFAULT_MAX_FEEDRATE", [1000, 1000, 30, 100]],
             ["HOMING_FEEDRATE_MM_M", [(30*60), (30*60), (6*60)]],
             ["DEFAULT_TRAVEL_ACCELERATION", 1000],
-            ["DEFAULT_MAX_ACCELERATION", [1500, 1500, 200, 700]],
-            ["DEFAULT_TRAVEL_ACCELERATION", 1500],
+            ["DEFAULT_MAX_ACCELERATION", [2000, 2000, 200, 700]],
+            ["DEFAULT_TRAVEL_ACCELERATION", 2000],
         ],
         disable: [
              "EEPROM_CHITCHAT",
