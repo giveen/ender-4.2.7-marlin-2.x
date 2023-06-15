@@ -1,37 +1,37 @@
 {
     "builds/autoLevel5x5.js": {
-        "version": "1726ba5bda1deb9b71e2d9644c789e806b7d1127",
+        "version": "8261af3010efce783dc2063d7fa75e17be89e88a",
         "md5": "9f991abf4682ac953c46a01e9f5bc4da",
-        "assetId": 112487612
+        "assetId": 112822021
     },
     "builds/base.js": {
-        "version": "1726ba5bda1deb9b71e2d9644c789e806b7d1127",
+        "version": "8261af3010efce783dc2063d7fa75e17be89e88a",
         "md5": "882453db25257fc5764fd4de6b60dbd4",
-        "assetId": 112487617
+        "assetId": 112822022
     },
     "builds/cr-touch-octoprint.js": {
-        "version": "1726ba5bda1deb9b71e2d9644c789e806b7d1127",
+        "version": "8261af3010efce783dc2063d7fa75e17be89e88a",
         "md5": "4bc5b46ec52c4da912d2799414688a38",
-        "assetId": 112487618
+        "assetId": 112822023
     },
     "builds/exp.js": {
-        "version": "1726ba5bda1deb9b71e2d9644c789e806b7d1127",
+        "version": "8261af3010efce783dc2063d7fa75e17be89e88a",
         "md5": "c13db9d4eb5d94e81e2a5bfc6db7d1b8",
-        "assetId": 112487620
+        "assetId": 112822024
     },
     "builds/manualBedMesh5x5.js": {
-        "version": "1726ba5bda1deb9b71e2d9644c789e806b7d1127",
+        "version": "8261af3010efce783dc2063d7fa75e17be89e88a",
         "md5": "860e53ed9b769f3a670ea402170d418a",
-        "assetId": 112487621
+        "assetId": 112822025
     },
     "builds/manual_octoprint.js": {
-        "version": "1726ba5bda1deb9b71e2d9644c789e806b7d1127",
+        "version": "8261af3010efce783dc2063d7fa75e17be89e88a",
         "md5": "4eb9ee6eb14969f19fabd216401f4ab8",
-        "assetId": 112487624
+        "assetId": 112822026
     },
     "builds/marlin_default.js": {
-        "version": "1726ba5bda1deb9b71e2d9644c789e806b7d1127",
+        "version": "8261af3010efce783dc2063d7fa75e17be89e88a",
         "md5": "7447dca1fa55d76dfae84ae4efc086ff",
-        "assetId": 112487626
+        "assetId": 112822028
     }
 }
