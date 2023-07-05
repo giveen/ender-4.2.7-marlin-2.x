@@ -1,37 +1,37 @@
 {
     "builds/autoLevel5x5.js": {
-        "version": "2.1.2.1",
+        "version": "2.0.9.7",
         "md5": "9f991abf4682ac953c46a01e9f5bc4da",
-        "assetId": 108676203
+        "assetId": 115611429
     },
     "builds/base.js": {
-        "version": "2.1.2.1",
+        "version": "2.0.9.7",
         "md5": "882453db25257fc5764fd4de6b60dbd4",
-        "assetId": 108676204
+        "assetId": 115611431
     },
     "builds/cr-touch-octoprint.js": {
-        "version": "2.1.2.1",
+        "version": "2.0.9.7",
         "md5": "4bc5b46ec52c4da912d2799414688a38",
-        "assetId": 112442959
+        "assetId": 115611432
     },
     "builds/exp.js": {
-        "version": "2.1.2.1",
+        "version": "2.0.9.7",
         "md5": "c13db9d4eb5d94e81e2a5bfc6db7d1b8",
-        "assetId": 108676216
+        "assetId": 115611433
     },
     "builds/manualBedMesh5x5.js": {
-        "version": "2.1.2.1",
+        "version": "2.0.9.7",
         "md5": "860e53ed9b769f3a670ea402170d418a",
-        "assetId": 108676226
+        "assetId": 115611435
     },
     "builds/manual_octoprint.js": {
-        "version": "2.1.2.1",
+        "version": "2.0.9.7",
         "md5": "4eb9ee6eb14969f19fabd216401f4ab8",
-        "assetId": 108676232
+        "assetId": 115611436
     },
     "builds/marlin_default.js": {
-        "version": "2.1.2.1",
+        "version": "2.0.9.7",
         "md5": "7447dca1fa55d76dfae84ae4efc086ff",
-        "assetId": 108676240
+        "assetId": 115611438
     }
 }
