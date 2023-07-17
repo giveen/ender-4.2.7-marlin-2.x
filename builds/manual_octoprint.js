@@ -4,7 +4,6 @@ module.exports = {
     extends: "builds/manualBedMesh5x5.js",// <--
     meta: {
         stable_name: "ender_3_4.2.7-{{marlin_version}}-octo-manual_mesh_5x5-{{uid}}",
-        nightly_name: "ender_3_4.2.7-{{current_date}}-octo-manual_mesh_5x5-{{uid}}"
     },
     configuration: {
         enable: [
