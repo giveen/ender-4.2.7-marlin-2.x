@@ -6,6 +6,6 @@ module.exports = {
     based_on: {
         repo: "https://github.com/MarlinFirmware/Configurations/",
         path: "/config/examples/Creality/Ender-3/CrealityV427/",
-        stable_branch: "release-2.1.x",
+        stable_branch: "release-{{marlin_version}}",
     }
 };
