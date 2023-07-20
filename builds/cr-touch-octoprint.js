@@ -2,7 +2,7 @@ module.exports = {
     extends: "builds/base.js",
     extends: "builds/autoLevel5x5.js",
     meta: {
-        stable_name: "ender_3_4.2.7-{{marlin_version}}-cr_level_5x5-{{uid}}",
+        stable_name: "ender_3_4.2.7-{{marlin_version}}-cr_level_5x5-{{uid}}"
     },
     configuration: {
         enable: [
