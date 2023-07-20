@@ -1,7 +1,7 @@
 module.exports = {
     extends: "builds/marlin_default.js",
     meta: {
-        stable_name: "ender_3_4.2.7-{{marlin_version}}-base-{{uid}}",
+        stable_name: "ender_3_4.2.7-{{marlin_version}}-base-{{uid}}"
     },
     configuration: {
         enable: [
