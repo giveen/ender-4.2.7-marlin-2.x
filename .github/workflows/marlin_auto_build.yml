@@ -5,9 +5,9 @@ on:
   push:
     paths:
       - 'builds/**'
-  # trigger every night at 03:30
+  # trigger every Friday at 03AM
   schedule:
-    - cron:  '30 3 * * *'
+    - cron:  '1 03 * * 5'
   workflow_dispatch: # Put here!!  
 
 jobs:
