@@ -1,8 +1,8 @@
 module.exports = {
     extends: "builds/base.js",
-    include: "builds/autoLevel.js",
+    include: "builds/features/autoLevel.js",
     meta: {
-        stable_name: "ender3_4.2.7-{{marlin_version}}-auto_level5x5-{{uid}}"
+        stable_name: "ender3_4.2.7-{{marlin_version}}-auto_level_5x5-{{uid}}"
     },
     configuration: {
         enable: [
