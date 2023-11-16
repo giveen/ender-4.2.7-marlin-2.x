@@ -13,5 +13,10 @@
         "version": "7fe07dc4ce0f34a1f04ff1c050c6b94fd4c3976a",
         "md5": "4f6e6c2da485be6951442337e2e34bf0",
         "assetId": 135939896
+    },
+    "builds/manualBedMesh5x5.js": {
+        "version": "7fe07dc4ce0f34a1f04ff1c050c6b94fd4c3976a",
+        "md5": "0b2d3cd2ab469c2316413aaf38e87d52",
+        "assetId": 135941230
     }
 }
