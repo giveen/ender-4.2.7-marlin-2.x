@@ -7,11 +7,11 @@ on:
       - 'builds/**'
   # trigger every Friday at 03AM
   schedule:
-    - cron:  '1 03 * * 5'
+    - cron:  '0 0 1 * *'
   workflow_dispatch: # Put here!!  
 
 jobs:
   create_builds:
     runs-on: ubuntu-latest 
     steps:
-    - uses: zisismaras/marlin_auto_build@v1
+    - uses: zisismaras/marlin_auto_build@v1.0.14
