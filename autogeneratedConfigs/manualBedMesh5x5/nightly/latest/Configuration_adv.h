@@ -461,7 +461,7 @@
       #define PID_FAN_SCALING_LIN_FACTOR (PID_FAN_SCALING_AT_FULL_SPEED-DEFAULT_Kf)/255.0
 
     #else
-      #define PID_FAN_SCALING_LIN_FACTOR (0)             // Power loss due to cooling = Kf * (fan_speed)
+      #define PID_FAN_SCALING_LIN_FACTOR (0)             // Power-loss due to cooling = Kf * (fan_speed)
       #define DEFAULT_Kf 10                              // A constant value added to the PID-tuner
       #define PID_FAN_SCALING_MIN_SPEED 10               // Minimum fan speed at which to enable PID_FAN_SCALING
     #endif
@@ -586,9 +586,6 @@
   #define CONTROLLERFAN_SPEED_IDLE        0 // (0-255) Idle speed, used when motors are disabled
   #define CONTROLLERFAN_IDLE_TIME        60 // (seconds) Extra time to keep the fan running after disabling motors
 
-  //#define CONTROLLERFAN_KICKSTART_TIME  100  // (ms)
-  //#define CONTROLLERFAN_KICKSTART_POWER 180  // 64-255
-
   // Use TEMP_SENSOR_BOARD as a trigger for enabling the controller fan
   //#define CONTROLLER_FAN_MIN_BOARD_TEMP 40  // (°C) Turn on the fan if the board reaches this temperature
 
@@ -607,8 +604,8 @@
  * gets it spinning reliably for a short time before setting the requested speed.
  * (Does not work on Sanguinololu with FAN_SOFT_PWM.)
  */
-//#define EFAN_KICKSTART_TIME  100  // (ms)
-//#define EFAN_KICKSTART_POWER 180  // 64-255
+//#define FAN_KICKSTART_TIME  100  // (ms)
+//#define FAN_KICKSTART_POWER 180  // 64-255
 
 // Some coolers may require a non-zero "off" state.
 //#define FAN_OFF_PWM  1
@@ -697,15 +694,12 @@
 #define CHAMBER_AUTO_FAN_PIN -1
 #define COOLER_AUTO_FAN_PIN -1
 
-#define EXTRUDER_AUTO_FAN_TEMPERATURE        50
-#define EXTRUDER_AUTO_FAN_SPEED             255  // 255 is full speed
-//#define EXTRUDER_AUTO_FAN_KICKSTART_TIME  100  // (ms)
-//#define EXTRUDER_AUTO_FAN_KICKSTART_POWER 180  // 64-255
-
-#define CHAMBER_AUTO_FAN_TEMPERATURE   28
-#define CHAMBER_AUTO_FAN_SPEED        255
-#define COOLER_AUTO_FAN_TEMPERATURE    18
-#define COOLER_AUTO_FAN_SPEED         255
+#define EXTRUDER_AUTO_FAN_TEMPERATURE 50
+#define EXTRUDER_AUTO_FAN_SPEED 255   // 255 == full speed
+#define CHAMBER_AUTO_FAN_TEMPERATURE 30
+#define CHAMBER_AUTO_FAN_SPEED 255
+#define COOLER_AUTO_FAN_TEMPERATURE 18
+#define COOLER_AUTO_FAN_SPEED 255
 
 /**
  * Hotend Cooling Fans tachometers
@@ -1354,7 +1348,7 @@
   #define CALIBRATION_NOZZLE_TIP_HEIGHT          1.0  // mm
   #define CALIBRATION_NOZZLE_OUTER_DIAMETER      2.0  // mm
 
-  // Uncomment to enable reporting (required for "G425 V", but consumes PROGMEM).
+  // Uncomment to enable reporting (required for "G425 V", but consumes flash).
   //#define CALIBRATION_REPORTING
 
   // The true location and dimension the cube/bolt/washer on the bed.
@@ -1486,6 +1480,7 @@
   #if IS_ULTIPANEL
     #define MANUAL_E_MOVES_RELATIVE // Display extruder move distance rather than "position"
     #define ULTIPANEL_FEEDMULTIPLY  // Encoder sets the feedrate multiplier on the Status Screen
+    //#define ULTIPANEL_FLOWPERCENT // Encoder sets the flow percentage on the Status Screen
   #endif
 #endif
 
@@ -1756,19 +1751,25 @@
    */
   //#define POWER_LOSS_RECOVERY
   #if ENABLED(POWER_LOSS_RECOVERY)
-    #define PLR_ENABLED_DEFAULT   false // Power Loss Recovery enabled by default. (Set with 'M413 Sn' & M500)
-    //#define BACKUP_POWER_SUPPLY       // Backup power / UPS to move the steppers on power loss
-    //#define POWER_LOSS_ZRAISE       2 // (mm) Z axis raise on resume (on power loss with UPS)
-    //#define POWER_LOSS_PIN         44 // Pin to detect power loss. Set to -1 to disable default pin on boards without module.
-    //#define POWER_LOSS_STATE     HIGH // State of pin indicating power loss
-    //#define POWER_LOSS_PULLUP         // Set pullup / pulldown as appropriate for your sensor
+    #define PLR_ENABLED_DEFAULT       false // Power-Loss Recovery enabled by default. (Set with 'M413 Sn' & M500)
+    //#define PLR_BED_THRESHOLD BED_MAXTEMP // (°C) Skip user confirmation at or above this bed temperature (0 to disable)
+
+    //#define POWER_LOSS_PIN             44 // Pin to detect power-loss. Set to -1 to disable default pin on boards without module, or comment to use board default.
+    //#define POWER_LOSS_STATE         HIGH // State of pin indicating power-loss
+    //#define POWER_LOSS_PULLUP             // Set pullup / pulldown as appropriate for your sensor
     //#define POWER_LOSS_PULLDOWN
-    //#define POWER_LOSS_PURGE_LEN   20 // (mm) Length of filament to purge on resume
-    //#define POWER_LOSS_RETRACT_LEN 10 // (mm) Length of filament to retract on fail. Requires backup power.
+
+    //#define POWER_LOSS_ZRAISE        2    // (mm) Z axis raise on resume (on power-loss with UPS)
+    //#define POWER_LOSS_PURGE_LEN    20    // (mm) Length of filament to purge on resume
 
     // Without a POWER_LOSS_PIN the following option helps reduce wear on the SD card,
     // especially with "vase mode" printing. Set too high and vases cannot be continued.
-    #define POWER_LOSS_MIN_Z_CHANGE 0.05 // (mm) Minimum Z change before saving power-loss data
+    #define POWER_LOSS_MIN_Z_CHANGE    0.05 // (mm) Minimum Z change before saving power-loss data
+
+    //#define BACKUP_POWER_SUPPLY           // Backup power / UPS to move the steppers on power-loss
+    #if ENABLED(BACKUP_POWER_SUPPLY)
+      //#define POWER_LOSS_RETRACT_LEN   10 // (mm) Length of filament to retract on fail
+    #endif
 
     // Enable if Z homing is needed for proper recovery. 99.9% of the time this should be disabled!
     //#define POWER_LOSS_RECOVER_ZHOME
@@ -2344,7 +2345,6 @@
   #endif
   //#define ADVANCE_K_EXTRA       // Add a second linear advance constant, configurable with M900 L.
   //#define LA_DEBUG              // Print debug information to serial during operation. Disable for production use.
-  //#define ALLOW_LOW_EJERK       // Allow a DEFAULT_EJERK value of <10. Recommended for direct drive hotends.
   //#define EXPERIMENTAL_I2S_LA   // Allow I2S_STEPPER_STREAM to be used with LA. Performance degrades as the LA step rate reaches ~20kHz.
 #endif
 
@@ -2727,6 +2727,7 @@
 //#define SERIAL_DMA
 
 /**
+ * Set the number of proportional font spaces required to fill up a typical character space.
  * This can help to better align the output of commands like `G29 O` Mesh Output.
  *
  * For clients that use a fixed-width font (like OctoPrint), leave this set to 1.0.
@@ -2954,6 +2955,7 @@
 
   //#define FILAMENT_LOAD_UNLOAD_GCODES           // Add M701/M702 Load/Unload G-codes, plus Load/Unload in the LCD Prepare menu.
   //#define FILAMENT_UNLOAD_ALL_EXTRUDERS         // Allow M702 to unload all extruders above a minimum target temp (as set by M302)
+  #define CONFIGURE_FILAMENT_CHANGE               // Add M603 G-code and menu items. Requires ~1.3K bytes of flash.
 #endif
 
 // @section tmc_smart
@@ -2994,7 +2996,7 @@
 
   #if AXIS_IS_TMC_CONFIG(X)
     #define X_CURRENT       580        // (mA) RMS current. Multiply by 1.414 for peak current.
-    #define X_CURRENT_HOME  X_CURRENT  // (mA) RMS current for sensorless homing
+    #define X_CURRENT_HOME  X_CURRENT  // (mA) RMS current for homing. (Typically lower than *_CURRENT.)
     #define X_MICROSTEPS     16        // 0..256
     #define X_RSENSE          0.11     // Multiplied x1000 for TMC26X
     #define X_CHAIN_POS      -1        // -1..0: Not chained. 1: MCU MOSI connected. 2: Next in chain, ...
@@ -3203,6 +3205,13 @@
     //#define E7_INTERPOLATE true
     //#define E7_HOLD_MULTIPLIER 0.5
   #endif
+
+  /**
+   * Use the homing current for all probing. (e.g., Current may be reduced to the
+   * point where a collision makes the motor skip instead of damaging the bed,
+   * though this is unlikely to save delicate probes from being damaged.
+   */
+  //#define PROBING_USE_CURRENT_HOME
 
   // @section tmc/spi
 
@@ -3868,38 +3877,6 @@
  */
 //#define CNC_DRILLING_CYCLE
 
-// @section reporting
-
-/**
- * Auto-report fan speed with M123 S<seconds>
- * Requires fans with tachometer pins
- */
-//#define AUTO_REPORT_FANS
-
-/**
- * Auto-report temperatures with M155 S<seconds>
- */
-#define AUTO_REPORT_TEMPERATURES
-#if ENABLED(AUTO_REPORT_TEMPERATURES) && TEMP_SENSOR_REDUNDANT
-  //#define AUTO_REPORT_REDUNDANT // Include the "R" sensor in the auto-report
-#endif
-
-/**
- * Auto-report position with M154 S<seconds>
- */
-//#define AUTO_REPORT_POSITION
-#if ENABLED(AUTO_REPORT_POSITION)
-  //#define AUTO_REPORT_REAL_POSITION // Auto-report the real position
-#endif
-
-/**
- * Include capabilities in M115 output
- */
-#define EXTENDED_CAPABILITIES_REPORT
-#if ENABLED(EXTENDED_CAPABILITIES_REPORT)
-  //#define M115_GEOMETRY_REPORT
-#endif
-
 // @section security
 
 /**
@@ -3942,12 +3919,49 @@
 
 // @section reporting
 
-// Extra options for the M114 "Current Position" report
+/**
+ * Extra options for the M114 "Current Position" report
+ */
 //#define M114_DETAIL         // Use 'M114` for details to check planner calculations
 //#define M114_REALTIME       // Real current position based on forward kinematics
 //#define M114_LEGACY         // M114 used to synchronize on every call. Enable if needed.
 
+/**
+ * Auto-report fan speed with M123 S<seconds>
+ * Requires fans with tachometer pins
+ */
+//#define AUTO_REPORT_FANS
+
 //#define REPORT_FAN_CHANGE   // Report the new fan speed when changed by M106 (and others)
+
+/**
+ * Auto-report temperatures with M155 S<seconds>
+ */
+#define AUTO_REPORT_TEMPERATURES
+#if ENABLED(AUTO_REPORT_TEMPERATURES) && TEMP_SENSOR_REDUNDANT
+  //#define AUTO_REPORT_REDUNDANT // Include the "R" sensor in the auto-report
+#endif
+
+/**
+ * Auto-report position with M154 S<seconds>
+ */
+//#define AUTO_REPORT_POSITION
+#if ENABLED(AUTO_REPORT_POSITION)
+  //#define AUTO_REPORT_REAL_POSITION // Auto-report the real position
+#endif
+
+/**
+ * M115 - Report capabilites. Disable to save ~1150 bytes of flash.
+ *        Some hosts (and serial TFT displays) rely on this feature.
+ */
+#define CAPABILITIES_REPORT
+#if ENABLED(CAPABILITIES_REPORT)
+  // Include capabilities in M115 output
+  #define EXTENDED_CAPABILITIES_REPORT
+  #if ENABLED(EXTENDED_CAPABILITIES_REPORT)
+    //#define M115_GEOMETRY_REPORT
+  #endif
+#endif
 
 // @section gcode
 
@@ -3960,13 +3974,30 @@
   //#define GCODE_QUOTED_STRINGS  // Support for quoted string parameters
 #endif
 
-// Support for MeatPack G-code compression (https://github.com/scottmudge/OctoPrint-MeatPack)
+/**
+ * Variables
+ *
+ * Define a variable from 100-115 with G-code like '#101=19.6'.
+ * A variable can then be used in a G-code expression like 'G0 X[#101+3]'.
+ * See https://gcodetutor.com/cnc-macro-programming/cnc-variables.html
+ */
+//#define GCODE_VARIABLES
+
+/**
+ * Support for MeatPack G-code compression (https://github.com/scottmudge/OctoPrint-MeatPack)
+ */
 //#define MEATPACK_ON_SERIAL_PORT_1
 //#define MEATPACK_ON_SERIAL_PORT_2
 
 //#define GCODE_CASE_INSENSITIVE  // Accept G-code sent to the firmware in lowercase
 
 //#define REPETIER_GCODE_M360     // Add commands originally from Repetier FW
+
+/**
+ * Enable M111 debug flags 1=ECHO, 2=INFO, 4=ERRORS (unimplemented).
+ * Disable to save some flash. Some hosts (Repetier Host) may rely on this feature.
+ */
+#define DEBUG_FLAGS_GCODE
 
 /**
  * Enable this option for a leaner build of Marlin that removes
@@ -3995,8 +4026,6 @@
   //#define VARIABLE_G0_FEEDRATE // The G0 feedrate is set by F in G0 motion mode
 #endif
 //#define G0_ANGULAR_FEEDRATE 2700 // (°/min)
-
-// @section gcode
 
 /**
  * Startup commands
